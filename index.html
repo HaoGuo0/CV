@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>李明教授 - 农业生物信息学研究团队</title>
+    <title>周旭教授 - 农业生物信息学研究团队</title>
     <style>
         :root {
             --primary-color: #2c3e50;     /* 主色调 */
@@ -29,6 +29,16 @@
             color: white;
             padding: 2rem;
             text-align: center;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 1rem;
+            object-fit: cover;
         }
 
         .nav {
@@ -110,16 +120,20 @@
 </head>
 <body>
     <header class="header">
-        <h1>李明 教授</h1>
-        <p>农业生物信息学与智能育种研究团队</p>
-        <p>中国农业大学生物学院 & 前沿交叉研究院双聘教授</p>
+        <!-- 教师照片 -->
+        <img src="professor.jpg" alt="李明教授" class="profile-img">
+        <h1>周旭 副教授</h1>
+        <p>生物信息学与生物育种研究团队</p>
+        <p>中国农业大学生物学院 & 前沿交叉研究院 副教授</p>
     </header>
 
     <nav class="nav">
         <div class="container">
             <a href="#research">研究方向</a>
             <a href="#publications">学术成果</a>
-            <a href="#team">研究团队</a>
+            <a href="#work">工作经历</a>
+            <a href="#education">教育背景</a>
+            <a href="#courses">教学课程</a>
             <a href="#contact">联系方式</a>
         </div>
     </nav>
@@ -130,15 +144,15 @@
             <div class="research-focus">
                 <div class="research-card">
                     <h3>作物基因组育种</h3>
-                    <p>基于多组学数据的作物智能育种算法开发</p>
+                    <p>开发机器学习等方法解析多组学数据</p>
                 </div>
                 <div class="research-card">
-                    <h3>农业大数据分析</h3>
-                    <p>整合表型组、环境组和基因组数据，构建农业智能决策系统</p>
+                    <h3>生物大规模数据分析</h3>
+                    <p>利用高通量技术，整合表型组、基因组、表观组以及微生物组学数据，解析小麦高产抗逆机制。</p>
                 </div>
                 <div class="research-card">
-                    <h3>农业微生物组</h3>
-                    <p>土壤-作物-微生物互作机制研究</p>
+                    <h3>物种进化</h3>
+                    <p>利用基因组数据解析小麦重要基因的起源与分化。</p>
                 </div>
             </div>
         </section>
@@ -146,33 +160,47 @@
         <section id="publications" class="section">
             <h2>代表性论文</h2>
             <ul class="publications">
-                <li>Li M, et al. Genomic selection for drought tolerance in maize. Nature Plants 2022</li>
-                <li>Wang X, Li M*, et al. Soil microbiome dynamics under climate change. Microbiome 2021</li>
-                <li>Chen J, Li M*, et al. AI-driven precision agriculture framework. PNAS 2020</li>
+                <li>Li et al., Dev Cell, 2019, 55:357-370.</li>
+                <li>Xue et al., Plant Physiol, 2018,178:1322-1333. </li>
+                <li>Wang et al., J Exp Bot, 2017, 68:2941-2952.</li>
             </ul>
         </section>
 
-        <section id="team" class="section">
-            <h2>研究团队</h2>
-            <div class="team-grid">
-                <div class="member-card">
-                    <img src="member1.jpg" alt="张伟">
-                    <h4>张伟 副教授</h4>
-                    <p>作物基因组学</p>
-                </div>
-                <div class="member-card">
-                    <img src="member2.jpg" alt="王琳">
-                    <h4>王琳 博士后</h4>
-                    <p>农业微生物组学</p>
-                </div>
-            </div>
+        <section id="work" class="section">
+            <h2>工作经历</h2>
+            <ul>
+                <li>2020年至今：中国农业大学前沿交叉研究院 副教授</li>
+                <br>
+                <li>2015年至今：中国农业大学，生物学院，副教授</li>
+                <br>
+                <li>2009-2014年：中国农业大学，生物学院，讲师</li>
+            </ul>
+        </section>
+
+        <section id="education" class="section">
+            <h2>教育背景</h2>
+            <ul>
+                <li>2003-2008年：中科院上海生命科学研究院 博士学位</li>
+                <br>
+                <li>1999-2003年：山东农业大学 学士学位</li>
+            </ul>
+        </section>
+
+        <section id="courses" class="section">
+            <h2>主讲课程</h2>
+            <ul>
+                <li>《生物信息学基础》 - 本科生课程</li>
+                <br>
+                <li>《作物基因组学》 - 研究生课程</li>
+                <br>
+                <li>《数据科学在农业中的应用》 - 选修课</li>
+            </ul>
         </section>
 
         <section id="contact" class="section">
             <h2>联系方式</h2>
-            <p>📧 liming@cau.edu.cn</p>
-            <p>📱 +86 138-1234-5678</p>
-            <p>🏢 中国农业大学生命科学研究中心A座502室</p>
+            <p>Email：xuzhou at cau.edu.cn</p>
+            <p>通讯地址：北京市海淀区圆明园西路2号，中国农业大学生物学院，100193</p>
         </section>
     </main>
 </body>
