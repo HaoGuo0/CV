@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李明教授 - 农业生物信息学研究团队</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;     /* 主色调 */
+            --accent-color: #8bc34a;      /* 农业主题色 */
+            --biology-green: #4caf50;     /* 生物学主题色 */
+            --tech-blue: #2196f3;         /* 技术主题色 */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--primary-color);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--tech-blue), var(--biology-green));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .nav {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-bottom: 2px solid #eee;
+        }
+
+        .nav a {
+            margin: 0 1.5rem;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .research-focus {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .research-card {
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+            background: #f8f9fa;
+        }
+
+        .publications li {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .member-card {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .member-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            .nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>李明 教授</h1>
+        <p>农业生物信息学与智能育种研究团队</p>
+        <p>中国农业大学生物学院 & 前沿交叉研究院双聘教授</p>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="#research">研究方向</a>
+            <a href="#publications">学术成果</a>
+            <a href="#team">研究团队</a>
+            <a href="#contact">联系方式</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="research" class="section">
+            <h2>研究方向</h2>
+            <div class="research-focus">
+                <div class="research-card">
+                    <h3>作物基因组育种</h3>
+                    <p>基于多组学数据的作物智能育种算法开发</p>
+                </div>
+                <div class="research-card">
+                    <h3>农业大数据分析</h3>
+                    <p>整合表型组、环境组和基因组数据，构建农业智能决策系统</p>
+                </div>
+                <div class="research-card">
+                    <h3>农业微生物组</h3>
+                    <p>土壤-作物-微生物互作机制研究</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="section">
+            <h2>代表性论文</h2>
+            <ul class="publications">
+                <li>Li M, et al. Genomic selection for drought tolerance in maize. Nature Plants 2022</li>
+                <li>Wang X, Li M*, et al. Soil microbiome dynamics under climate change. Microbiome 2021</li>
+                <li>Chen J, Li M*, et al. AI-driven precision agriculture framework. PNAS 2020</li>
+            </ul>
+        </section>
+
+        <section id="team" class="section">
+            <h2>研究团队</h2>
+            <div class="team-grid">
+                <div class="member-card">
+                    <img src="member1.jpg" alt="张伟">
+                    <h4>张伟 副教授</h4>
+                    <p>作物基因组学</p>
+                </div>
+                <div class="member-card">
+                    <img src="member2.jpg" alt="王琳">
+                    <h4>王琳 博士后</h4>
+                    <p>农业微生物组学</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>联系方式</h2>
+            <p>📧 liming@cau.edu.cn</p>
+            <p>📱 +86 138-1234-5678</p>
+            <p>🏢 中国农业大学生命科学研究中心A座502室</p>
+        </section>
+    </main>
+</body>
+</html>
