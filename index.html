@@ -3,137 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>郭昊</title>
+    <title>郭昊 - 简历</title>
     <style>
         :root {
-            --primary-color: #2c3e50;     
-            --accent-color: #8bc34a;     
-            --biology-green: #4caf50;     
-            --tech-blue: #2196f3;        
+            --primary-color: #2c3e50;     /* 主文本色 */
+            --accent-color: #4caf50;       /* 强调色 */
+            --background: #f8f9fa;         /* 背景色 */
+            --tech-blue: #2196f3;          /* 技术强调色 */
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Segoe UI', system-ui, sans-serif;
         }
 
         body {
             line-height: 1.6;
             color: var(--primary-color);
+            background-color: var(--background);
         }
 
+        /* 头部样式 */
         .header {
-            background: linear-gradient(135deg, var(--tech-blue), var(--biology-green));
+            background: linear-gradient(135deg, var(--tech-blue), #1b5e20);
             color: white;
-            padding: 2rem;
+            padding: 3rem 1rem;
             text-align: center;
-            position: relative;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .profile-img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 4px solid white;
-            margin-bottom: 1rem;
+            border: 4px solid rgba(255,255,255,0.8);
+            margin: 1rem auto;
             object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         .nav {
-            background: #f8f9fa;
+            background: white;
             padding: 1rem;
-            border-bottom: 2px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
         }
 
         .nav a {
-            margin: 0 1.5rem;
-            text-decoration: none;
             color: var(--primary-color);
+            text-decoration: none;
             font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            background: var(--accent-color);
+            color: white;
         }
 
         .container {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
+            margin: 2rem auto;
+            padding: 0 1rem;
         }
 
         .section {
-            margin: 3rem 0;
-            padding: 2rem;
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
         }
 
-        .research-focus {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+        h2 {
+            color: var(--accent-color);
+            border-left: 4px solid var(--tech-blue);
+            padding-left: 1rem;
+            margin-bottom: 2rem;
         }
 
         .research-card {
             padding: 1.5rem;
-            border-left: 4px solid var(--accent-color);
-            background: #f8f9fa;
-        }
-
-        .publications li {
             margin: 1rem 0;
-            padding: 1rem;
-            background: #f8f9fa;
-            border-radius: 5px;
+            background: var(--background);
+            border-radius: 8px;
+            border-left: 4px solid var(--tech-blue);
+            transition: transform 0.2s;
         }
 
-        .team-grid {
+        .research-card:hover {
+            transform: translateX(10px);
+        }
+
+        .skill-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
         }
 
-        .member-card {
-            text-align: center;
+        .skill-item {
             padding: 1rem;
+            background: var(--background);
+            border-radius: 8px;
+            text-align: center;
         }
 
-        .member-card img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1rem;
+        .publication-item {
+            padding: 1.5rem;
+            margin: 1rem 0;
+            background: var(--background);
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .publication-item::before {
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
+            .nav-container {
+                flex-wrap: wrap;
+                gap: 1rem;
             }
-            .nav a {
-                display: block;
-                margin: 0.5rem 0;
+            
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .section {
+                padding: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
     <header class="header">
-        <!-- 个人照片 -->
-        <img src="picture.jpg" alt="profile" class="profile-img">
+        <img src="picture.jpg" alt="郭昊" class="profile-img">
         <h1>郭昊</h1>
-        <p></p>
-        <p></p>
+        <p>生物信息工程师</p>
     </header>
 
     <nav class="nav">
-        <div class="container">
-            <a href="#research">研究方向</a>
-            <a href="#publications">研究工作</a>
-            <a href="#work">个人经历</a>
-            <a href="#education">教育背景</a>
-            <a href="#courses">主讲课程</a>
+        <div class="nav-container">
+            <a href="#research">研究经历</a>
+            <a href="#skills">专业技能</a>
+            <a href="#publications">科研成果</a>
+            <a href="#experience">工作经历</a>
             <a href="#contact">联系方式</a>
         </div>
     </nav>
@@ -141,45 +187,81 @@
     <main class="container">
         <section id="research" class="section">
             <h2>研究经历</h2>
-            <div class="research-focus">
-                <div class="research-card">
-                    <h3>NPF基因家族的鉴定</h3>
-                    <p>以烟草NPF1//PTR家族基因为基础，对烟草该基因家族进行鉴定及生信分析，包括进化树的构建、基因共线性分析等生物信息分析。利用NCBI中已发表文章的原始转录组数据分析，利用服务器和R语言搭建实验室转录组上下游数据分析流程，对其进行上下
-游分析，其中包括掌握质控-Fastqc、过滤-trimmgalore、比对-Hisat2、定量-featureCounts，得到不同处理下的表达矩阵，在R语言中进行下游差异表达分析（DESeq2），得到相关基因表达矩阵。</p>
+            <div class="research-card">
+                <h3>NPF基因家族的鉴定</h3>
+                <p>以烟草NPF1//PTR家族基因为基础，对烟草该基因家族进行鉴定及生信分析，包括进化树的构建、基因共线性分析等生物信息分析。利用NCBI中已发表文章的原始转录组数据分析，利用服务器和R语言搭建实验室转录组上下游数据分析流程，对其进行上下游分析，得到不同处理下的表达矩阵，在R语言中进行下游差异表达分析（DESeq2），得到差异基因表达矩阵。.</p>
+            </div>
+            <div class="research-card">
+                <h3>甘蓝型油菜磷吸收相关性状全基因关联分析（GWAS）</h3>
+                <p>负责对自然群体进行基因型分析，包括群体结构分析、品种亲缘关系分析等。并通过全基因组关联分析（MLM、GLM模型）筛选自然群体中潜在的磷高效吸收基因。</p>
+            </div>
+            <div class="research-card">
+                <h3>其他经历</h3>
+                <p>利用大规模基因组及蛋白组数据信息，探究基因家族从藻类至被子植物的进化关系，深入研究不同类型植物基因的功能分化等。</p>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>专业技能</h2>
+            <div class="skill-grid">
+                <div class="skill-item">
+                    <h3>编程语言</h3>
+                    <p>Python / R / Shell</p>
                 </div>
-                <div class="research-card">
-                    <h3>甘蓝型油菜磷吸收相关性状全基因关联分析（GWAS）</h3>
-                    <p>负责对自然群体进行基因型分析，包括群体结构分析、品种亲缘关系分析等。并通过全基因组关联分析（MLM、GLM模型）筛选自然群体中潜在的磷高效吸收基因。</p>
+                <div class="skill-item">
+                    <h3>生物信息</h3>
+                    <p>RNA-seq、WGS、Chip/atac-seq，DAP-seq、GWAS、系统发育分析等</p>
                 </div>
-                <div class="research-card">
-                    <h3>其他技能掌握</h3>
-                    <p>利用基因组数据解析小麦重要基因的起源与分化。</p>
+                <div class="skill-item">
+                    <h3>Web</h3>
+                    <p>掌握一点CSS及HTML</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Pipline</h3>
+                    <p>利用Python及Shell搭建各种组学数据分析流程</p>
                 </div>
             </div>
         </section>
 
         <section id="publications" class="section">
             <h2>科研成果</h2>
-            <ul class="publications">
-                <li>Guo H, He X, Zhang H, Tan R, Yang J, Xu F, Wang S, Yang C, Ding G. Physiological Responses of Cigar Tobacco Crop to Nitrogen Deficiency and Genome-Wide Characterization of the NtNPF Family Genes. Plants (Basel). 2022 Nov 11;11(22):3064. doi: 10.3390/plants11223064. PMID: 36432793; PMCID: PMC9697317.</li>
-            </ul>
+            <div class="publication-item">
+                <li>Guo H, He X, Zhang H, Tan R, Yang J, Xu F, Wang S, Yang C, Ding G. Physiological Responses of Cigar Tobacco Crop to Nitrogen Deficiency and Genome-Wide Characterization of the NtNPF Family Genes. Plants (Basel). 2022 Nov 11;11(22):3064. doi: 10.3390/plants11223064.</li>
+                <li>郭昊#，谭荣磊#，等,《遮阴栽培对雪茄烟叶叶面均匀性的影响》,中国农业科技导报.（北大核心，IF=1.759）</li>
+            </div>
         </section>
 
-        <section id="work" class="section">
+        <section id="experience" class="section">
             <h2>工作经历</h2>
-            <ul>
-                <li>2023.08-2024.08：武汉艾迪晶生物科技有限公司 生物信息工程师</li>
-                <br>
-                <li>2021.09-2023.06：华中农业大学  资源与环境学院 资源利用与植物保护</li>
-                <br>
-                <li>2017.09-2021.06：山东农业大学 资源与环境学院 土地资源管理</li>
-            </ul>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>2023.08-2024.08</h3>
+                    <p>武汉艾迪晶生物科技有限公司  生物信息工程师</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2021.09-2023.06</h3>
+                    <p>华中农业大学  资源与环境学院 资源利用与植物保护</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2017.09-2021.06</h3>
+                    <p>山东农业大学 资源与环境学院 土地资源管理</p>
+                </div>
+            </div>
         </section>
 
+        <!-- 联系方式 -->
         <section id="contact" class="section">
             <h2>联系方式</h2>
-            <p>Email：994913039@qq.com</p>
-            <p>Tell:13002707789</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <p>994913039@qq.com</p>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <p>13002707789</p>
+                </div>
+            </div>
         </section>
     </main>
 </body>
